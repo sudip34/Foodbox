@@ -1,0 +1,17 @@
+<!-- <div class="cart-area d-n">
+    <div id="cart" (click)="inToCart()">
+        <div  class="total">{{totalPrice | currency : "EUR"}}
+            <span>{{totalQuantity}}</span>
+        </div>
+        <i class="fa fa-shopping-cart"></i>
+    </div>
+</div> -->
+
+<div class="cart-area d-n">
+    <a id="cart" routerLink="/cart-details">
+        <div  class="total">{{totalPrice | currency : "EUR"}}
+            <span>{{totalQuantity}}</span>
+        </div>
+        <i class="fa fa-shopping-cart"></i>
+    </a>
+</div>

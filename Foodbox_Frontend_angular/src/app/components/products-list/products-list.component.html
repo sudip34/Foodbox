@@ -1,0 +1,96 @@
+<!-- HEADER DESKTOP-->
+<div class="main-content">
+    <div class="container-fluid">
+        <div *ngIf="loggedin==true" class="container-fluid">
+            <button id="usrLogout-button" (click)="logout()" class="au-btn-submit" type="submit" >
+                Logout
+            </button> 
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-6 bg-dark">
+                <button id="sortIncresing" (click)="sortIncresing()" class="btn btn-primary" type="submit">
+                Price-Increasing
+                </button>
+          </div>
+          <div class="col-sm-6 bg-dark">
+               <button id="sortDecresing" (click)="sortDecresing()" class="btn btn-primary" type="submit">
+                Price-Decreasing
+                </button>>
+          </div>
+        </div>
+      </div>
+    
+    
+
+
+    
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- loop over the collection of products -->
+
+                <div *ngFor="let tempProduct of products | paginate:{itemsPerPage:12,
+                    currentPage:page,
+                    totalItems: totalElements}" 
+                            class = "col-md-3">
+                    <div *ngIf="(tempProduct.active)==true" >   
+                        <div class = "product-box">
+                            <a  routerLink="/products/{{tempProduct.id}}">
+                                <img src="{{tempProduct.imageUrl}}" class = "img-responsive">
+                            </a>
+                            <div class="price">
+                            <a routerLink="/products/{{tempProduct.id}}">
+                                <h1>{{tempProduct.name}}</h1>
+                            </a>
+                            </div>
+                            <div class="price">{{tempProduct.unitPrice | currency :"EUR"}}>
+                                <button id="addToCart" (click)="addToCart(tempProduct)" class="btn btn-primary btn-sm">Add to cart</button>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="(tempProduct.active)==false" >   
+                        <div class = "product-box">
+                            <a >
+                                <img src="{{tempProduct.imageUrl}}" class = "image-blr ">
+                            </a>
+                            <a >
+                                <h1>{{tempProduct.name}}</h1>
+                            </a>
+                            <div class="price">{{tempProduct.unitPrice | currency :"EUR"}}>
+                                <button  class="btn btn-danger btn-sm">Out Of Stock  </button>
+                                    
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            
+
+                    <!--if products are empty then display a message-->
+            
+                <div *ngIf="products?.length==0" class = "alert alert-waring col-md-12" role="alert">
+                    No prosucts found.
+                </div>
+                <!-- <pagination-controls (pageChange)="page=$event"></pagination-controls> -->
+            </div>
+
+            
+        </div>
+        <!-- begin footer -->
+
+        <div class="footer-pagination">
+                
+                <div class="col-md-6">
+                    <pagination-controls (pageChange)="page=$event"></pagination-controls>
+                </div>
+
+        </div>
+
+        <!-- end footer -->
+
+    </div>
+
+</div>
+

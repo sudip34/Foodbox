@@ -1,0 +1,54 @@
+<div class="page-wrapper">
+  <!-- MENU SIDEBAR-->
+  <aside class="menu-sidebar d-none d-lg-block">
+    <div class="logo">
+      <a routerLink="/products">
+        <img src="assets/images/logo.png" alt="kitchenStory" class="img-responsive">
+      </a>
+    </div>
+
+    <!-- product category here -->
+    <app-product-category></app-product-category>
+    
+  </aside> -->
+
+  <!-- END MENU SIDEBAR-->
+
+
+  <!-- PAGE CONTAINER-->
+  <div class="page-container">
+    <!-- HEADER DESKTOP-->
+			<header class="header-desktop">
+				<div class="section-content section-content-p30">
+					<div class="container-fluid">
+						<div class="header-wrap">
+              
+              <app-search> </app-search>
+
+              <!-- <div class="total">
+                <button class="au-btn-submit" type="submit">
+									Login
+								</button>
+              </div> -->
+
+              <app-cart-status></app-cart-status>              
+
+						</div>
+						<div class="account-wrap"></div>
+					</div>
+				</div>
+			</header>
+			<!-- END HEADER DESKTOP-->
+    
+    
+    <!-- MAIN CONTENT-->
+
+      <router-outlet></router-outlet> <!-- with the routes from app.module.ts -->
+
+      
+
+    </div>
+
+
+			
+</div>
