@@ -58,7 +58,7 @@ public class LoginController {
 		List<String> adminNames = new ArrayList<>();
 		for (AdminLogin login : logins) {
 			if(login.getRole().equals("admin"))
-			adminNames.add(login.getAdminName());
+				adminNames.add(login.getAdminName());
 		}
 
 		return adminNames;
@@ -69,7 +69,7 @@ public class LoginController {
 		List<String> adminNames = new ArrayList<>();
 		for (AdminLogin login : logins) {
 			if(login.getRole().equals("User"))
-			adminNames.add(login.getAdminName());
+				adminNames.add(login.getAdminName());
 		}
 
 		return adminNames;
