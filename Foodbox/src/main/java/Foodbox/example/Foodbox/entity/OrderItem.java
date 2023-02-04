@@ -103,6 +103,12 @@ public class OrderItem {
 	public void setOrder(Order order) {
 		this.order = order;
 	}
+
+	@Override
+	public String toString() {
+		return "OrderItem [id=" + id + ", imageUrl=" + imageUrl + ", unitPrice=" + unitPrice + ", quantity=" + quantity
+				+ ", productId=" + productId + ", order=" + order + "]";
+	}
     
     
 

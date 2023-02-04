@@ -65,35 +65,10 @@ public class Order {
     @JoinColumn(name = "billing_address_id", referencedColumnName = "id")
     private Address billingAddress;
     
-    
-    
-
-//    public Order(Long id, String orderTrackingNumber, int totalQuantity, BigDecimal totalPrice, String status,
-//			Date dateCreated, Date lastUpdated, Set<OrderItem> orderItems, AdminLogin customer, Address shippingAddress,
-//			Address billingAddress) {
-//		super();
-//		this.id = id;
-//		this.orderTrackingNumber = orderTrackingNumber;
-//		this.totalQuantity = totalQuantity;
-//		this.totalPrice = totalPrice;
-//		this.status = status;
-//		this.dateCreated = dateCreated;
-//		this.lastUpdated = lastUpdated;
-//		this.orderItems = orderItems;
-//		this.customer = customer;
-//		this.shippingAddress = shippingAddress;
-//		this.billingAddress = billingAddress;
-//	}
-    
-    
-    
-
-
 
 
 	public Order() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 
@@ -311,5 +286,21 @@ public class Order {
             item.setOrder(this);
         }
     }
+
+
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "Order [id=" + id + ", orderTrackingNumber=" + orderTrackingNumber + ", totalQuantity=" + totalQuantity
+				+ ", totalPrice=" + totalPrice + ", status=" + status + ", dateCreated=" + dateCreated
+				+ ", lastUpdated=" + lastUpdated + ", orderItems=" + orderItems + ", customer=" + customer
+				+ ", shippingAddress=" + shippingAddress + ", billingAddress=" + billingAddress + "]";
+	}
+	
+
 
 }
