@@ -49,6 +49,4 @@ public class ProductCategory {
 		return "ProductCategory [id=" + id + ", productCategory=" + productCategory + "]";
 	}
 
-	
-
 }
