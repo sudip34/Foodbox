@@ -101,13 +101,7 @@ public class ProductController {
 	}
 	
 	
-//	http://localhost:8080/api/products/search?name=${theKeyword}
-//	@GetMapping("/products/search/{name1}")
-//	public Page<Product>FindByName(@PathVariable("name1") String name){
-//		
-//		return this.productService.FindByNameContaining(name);
-//		
-//	}
+
 	
 	
 //=================================sort======================================
