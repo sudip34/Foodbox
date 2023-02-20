@@ -13,7 +13,6 @@ public class OrderTest {
 		String path="C:\\Users\\sudip\\Desktop\\MainProject\\FoodBoxTestWithJenkins\\driver\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", path);
 		
-//		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("http://localhost:4200/user-login");
@@ -27,8 +26,6 @@ public class OrderTest {
 		driver.findElement(By.id("addToCart")).click();
 		driver.findElement(By.id("addToCart")).click();
 		
-//		driver.findElement(By.linkText("/cart-details")).click();
-//		driver.findElement(By.xpath("//*[@id='cart']")).click();
 
 
 		
@@ -37,7 +34,7 @@ public class OrderTest {
 		
 		//test billing address
 		
-		driver.findElement(By.id("shippingAddressStreet")).sendKeys("Walter Rathenau Straﬂe-30");
+		driver.findElement(By.id("shippingAddressStreet")).sendKeys("Walter Rathenau Stra√üe-30");
 		driver.findElement(By.id("shippingAddressCity")).sendKeys("Halle");
 		
 		
@@ -58,7 +55,7 @@ public class OrderTest {
 		//test billing address
 
 		
-		driver.findElement(By.id("billingAddressStreet")).sendKeys("Walter Rathenau Straﬂe-30");
+		driver.findElement(By.id("billingAddressStreet")).sendKeys("Walter Rathenau Stra√üe-30");
 		driver.findElement(By.id("billingAddressCity")).sendKeys("Halle");
 		
 		
