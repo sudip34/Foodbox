@@ -27,13 +27,7 @@ public class DashboardTest {
 		//provide implicit wait
 		driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
 		
-//		List<WebElement>  columns = driver.findElements(By.xpath(".//*[@id=\"product\"]/table/tbody/tr/th"));
-//        System.out.println("No of columns are : " +columns.size()); 
-//        //No.of rows 
-//        List<WebElement>  rows = driver.findElements(By.xpath(".//*[@id='product']/table/tbody/tr/td[1]")); 
-//        System.out.println("No of rows are : " + rows.size());
-//        
-//		
+		
 		String tableHeader = driver.findElement(By.xpath("//*[@id=\"table\"]/thead/tr")).getText();
 		System.out.println(tableHeader);
 		
